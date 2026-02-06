@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Pacifico, cursive;
+    background-color: #ffd1dc; /* your solid background color */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* keeps the card vertically centered */
+}
+
+
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center horizontally & vertically */
+    width: 400px;
+    height: 550px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* floating hearts */
+.heart {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.5);
+    transform: rotate(45deg);
+    animation: float 8s infinite linear;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+}
+
+.heart::before { top: -7px; left: 0; }
+.heart::after { left: -7px; top: 0; }
+
+@keyframes float {
+    from { transform: translateY(100vh) rotate(45deg); }
+    to { transform: translateY(-10vh) rotate(45deg); }
+}
+
+
+
+h2 {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 200px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+button {
+    margin-top: 18px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff6b8a;
+    font-size: 16px;
+    cursor: pointer;
+}
+h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.message {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.next {
+    position: absolute;
+    bottom: 25px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.image-box img {
+    width: 220px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
